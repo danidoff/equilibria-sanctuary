@@ -3,6 +3,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroSection from '../components/home/HeroSection.astro';
 import HomeSections from '../components/home/HomeSections.astro';
 import ApplyFormPlaceholder from '../components/site/ApplyFormPlaceholder.astro';
+
+const testGoogleFormUrl =
+  'https://docs.google.com/forms/d/e/1FAIpQLSftJW6BEEcE9bxF8KATUqhXaf55HfVkXMtlsyX777vBZ2wCqg/viewform?embedded=true';
 ---
 
 <BaseLayout
@@ -12,5 +15,9 @@ import ApplyFormPlaceholder from '../components/site/ApplyFormPlaceholder.astro'
 >
   <HeroSection />
   <HomeSections />
-  <ApplyFormPlaceholder title="Apply for the <em>Experience.</em>" />
+  <ApplyFormPlaceholder
+    title="Apply for the <em>Experience.</em>"
+    intro="We curate each retreat carefully. This same test Google Form is embedded here as the homepage application section as well."
+    embedUrl={testGoogleFormUrl}
+  />
 </BaseLayout>
