@@ -1,0 +1,11 @@
+{
+	"scripts": {
+    "fb:login": "firebase login",
+    "fb:reauth": "firebase login --reauth",
+    "fb:init": "firebase init hosting",
+    "fb:deploy": "firebase deploy"
+  },
+  "dependencies": {
+    "firebase-tools": "^15.13.0"
+  }
+}
