@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/site/PageHero.astro';
+import ApplyFormPlaceholder from '../components/site/ApplyFormPlaceholder.astro';
+
+const testGoogleFormUrl =
+  'https://docs.google.com/forms/d/e/1FAIpQLSftJW6BEEcE9bxF8KATUqhXaf55HfVkXMtlsyX777vBZ2wCqg/viewform?embedded=true';
+---
+
+<BaseLayout
+  title="Apply | Equilibria Sanctuary"
+  description="Begin your application for the Equilibria Sanctuary experience."
+  pathname="/apply"
+>
+  <PageHero
+    eyebrow="Apply"
+    title="Begin the conversation."
+    subtitle="This page is prepared for the final Google Form embed. For now, the component below reserves the exact space and styling."
+  />
+
+  <ApplyFormPlaceholder
+    title="Apply for the <em>Experience.</em>"
+    intro="We curate each retreat carefully. This test Google Form is embedded below so we can validate layout, responsiveness, and overall fit."
+    embedUrl={testGoogleFormUrl}
+  />
+</BaseLayout>

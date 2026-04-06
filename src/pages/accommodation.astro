@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/site/PageHero.astro';
+---
+
+<BaseLayout
+  title="Accommodation | Equilibria Sanctuary"
+  description="Discover the private residence, suite experience, and design philosophy behind Equilibria Sanctuary."
+  pathname="/accommodation"
+>
+  <PageHero
+    eyebrow="Accommodation"
+    title="A private villa designed to exhale."
+    subtitle="The residence is intimate, quiet, and deeply considered. Every room is meant to lower the volume of the outside world."
+  />
+
+  <section class="section-pad" id="accommodation">
+    <div class="max-w">
+      <div class="eyebrow">The Residence</div>
+      <h2>Luxury without <em>spectacle.</em></h2>
+      <p class="lead">
+        Equilibria is designed as a home rather than a hotel. The materials, light, textures,
+        and atmosphere all work together to create privacy, softness, and ease.
+      </p>
+      <div class="accom-features">
+        <div class="accom-feature">
+          <h4>Private Suites</h4>
+          <p>Quiet rooms with natural light, layered materials, and a calm visual palette.</p>
+        </div>
+        <div class="accom-feature">
+          <h4>Shared Sanctuaries</h4>
+          <p>Spaces for slow conversation, reading, tea rituals, and unstructured stillness.</p>
+        </div>
+        <div class="accom-feature">
+          <h4>Nature Access</h4>
+          <p>Immediate connection to the mountain landscape, fresh air, and restorative silence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,51 @@
+---
+interface Props {
+  pathname?: string;
+}
+
+const { pathname = '/' } = Astro.props;
+
+const navItems = [
+  { href: '/experience', label: 'The Experience' },
+  { href: '/accommodation', label: 'Accommodation' },
+  { href: '/wellness', label: 'Wellness' },
+  { href: '/pricing', label: 'Tiers' },
+  { href: '/about', label: 'About' },
+];
+
+const isActive = (href: string) =>
+  href === '/' ? pathname === '/' : pathname.startsWith(href);
+---
+
+<nav id="mainNav">
+  <div class="nav-shell">
+    <a href="/" class="nav-logo">Equilibria Sanctuary</a>
+    <ul class="nav-links">
+      {navItems.map((item) => (
+        <li>
+          <a href={item.href} class:list={{ active: isActive(item.href) }}>{item.label}</a>
+        </li>
+      ))}
+    </ul>
+    <div class="nav-actions">
+      <a href="/apply" class="nav-cta">Apply for the Experience</a>
+      <button
+        class="nav-hamburger"
+        type="button"
+        aria-label="Toggle menu"
+        aria-controls="mobileMenu"
+        aria-expanded="false"
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <div class="mobile-menu-label">Navigation</div>
+  {navItems.map((item) => (
+    <a href={item.href} class:list={{ active: isActive(item.href) }}>{item.label}</a>
+  ))}
+  <a href="/apply" class="nav-cta">Apply for the Experience</a>
+</div>

@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/site/PageHero.astro';
+---
+
+<BaseLayout
+  title="Wellness | Equilibria Sanctuary"
+  description="Explore the therapeutic pillars, holistic support, and restorative rituals at Equilibria Sanctuary."
+  pathname="/wellness"
+>
+  <PageHero
+    eyebrow="Wellness"
+    title="Support that is both gentle and exact."
+    subtitle="Our wellness philosophy combines nervous-system regulation, bodywork, ritual, and spacious reflection."
+  />
+
+  <section class="section-pad" id="wellness">
+    <div class="max-w">
+      <div class="wellness-grid">
+        <div>
+          <div class="eyebrow">The Pillars</div>
+          <h2>Restoration across body, mind, and <em>energy.</em></h2>
+          <div class="wellness-pillars">
+            <div class="pillar">
+              <div class="pillar-num">01</div>
+              <div class="pillar-content">
+                <h4>Nervous System Calm</h4>
+                <p>Breathwork, meditation, silence, and pacing that help the body stop bracing.</p>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-num">02</div>
+              <div class="pillar-content">
+                <h4>Therapeutic Care</h4>
+                <p>Massage, thermal recovery, and body-based support tailored to depletion and stress.</p>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-num">03</div>
+              <div class="pillar-content">
+                <h4>Inner Clarity</h4>
+                <p>Journaling, reflection, and guided sessions designed to reconnect you with your own signal.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="wellness-image">
+          <img
+            src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1200&q=90"
+            alt="Quiet wellness ritual"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

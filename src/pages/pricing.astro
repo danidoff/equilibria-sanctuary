@@ -1,0 +1,62 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/site/PageHero.astro';
+---
+
+<BaseLayout
+  title="Pricing | Equilibria Sanctuary"
+  description="View the experience tiers and private retreat formats available through Equilibria Sanctuary."
+  pathname="/pricing"
+>
+  <PageHero
+    eyebrow="Experience Tiers"
+    title="Choose the format that matches your season."
+    subtitle="From intimate collective retreats to private and group formats, each tier is curated with intention."
+  />
+
+  <section id="pricing" class="section-pad">
+    <div class="max-w">
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="pricing-tier">Collective</div>
+          <h3>Rejuvenate</h3>
+          <div class="pricing-from">From</div>
+          <div class="pricing-amount">€4,900</div>
+          <div class="pricing-nights">5 nights</div>
+          <ul class="pricing-features">
+            <li>Shared retreat experience</li>
+            <li>Wellness rituals and guided sessions</li>
+            <li>Accommodation and dining included</li>
+          </ul>
+          <a href="/apply" class="btn-apply">Apply</a>
+        </div>
+        <div class="pricing-card featured">
+          <div class="pricing-tier">Signature</div>
+          <h3>Empower</h3>
+          <div class="pricing-from">From</div>
+          <div class="pricing-amount">€5,600</div>
+          <div class="pricing-nights">5 nights</div>
+          <ul class="pricing-features">
+            <li>Elevated group format</li>
+            <li>Extra therapeutic support</li>
+            <li>Refined programming and dining</li>
+          </ul>
+          <a href="/apply" class="btn-apply">Apply</a>
+        </div>
+        <div class="pricing-card">
+          <div class="pricing-tier">Private</div>
+          <h3>Haven</h3>
+          <div class="pricing-from">From</div>
+          <div class="pricing-amount">Custom</div>
+          <div class="pricing-nights">Private booking</div>
+          <ul class="pricing-features">
+            <li>Family, group, or leadership retreats</li>
+            <li>Fully tailored itinerary</li>
+            <li>Private-use residence model</li>
+          </ul>
+          <a href="/apply" class="btn-apply">Enquire</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
