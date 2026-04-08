@@ -1,23 +1,38 @@
 ---
 interface Props {
-  eyebrow: string;
-  title: string;
-  subtitle: string;
+  eyebrow?: string;
+  title?: string;
+  subtitle?: string;
+  primaryHref?: string;
+  primaryLabel?: string;
+  secondaryHref?: string;
+  secondaryLabel?: string;
 }
 
-const { eyebrow, title, subtitle } = Astro.props;
+const {
+  eyebrow,
+  title,
+  subtitle,
+  primaryHref = '/apply#begin',
+  primaryLabel = 'Apply for the Experience',
+  secondaryHref = '/',
+  secondaryLabel = 'Return Home',
+} = Astro.props;
 ---
 
 <section id="hero">
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <div class="hero-eyebrow">{eyebrow}</div>
-    <h1 class="hero-title">{title}</h1>
-    <p class="hero-sub">{subtitle}</p>
+    {eyebrow && <div class="hero-eyebrow">{eyebrow}</div>}
+    <slot>
+      {title && <h1 class="hero-title">{title}</h1>}
+      {subtitle && <p class="hero-sub">{subtitle}</p>}
+    </slot>
     <div class="hero-actions">
-      <a href="/apply#begin" class="hero-cta">Apply for the Experience</a>
-      <a href="/" class="hero-cta-ghost">Return Home</a>
+      <a href={primaryHref} class="hero-cta">{primaryLabel}</a>
+      <a href={secondaryHref} class="hero-cta-ghost">{secondaryLabel}</a>
     </div>
   </div>
+  <div class="hero-scroll"><div class="hero-scroll-line"></div>Scroll</div>
 </section>
