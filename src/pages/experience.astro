@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/site/PageHero.astro';
+import experienceSection from '../content/experience-section.html?raw';
 ---
 
 <BaseLayout
@@ -8,59 +9,13 @@ import PageHero from '../components/site/PageHero.astro';
   description="Explore the daily rhythm, rituals, and restorative structure of the Equilibria Sanctuary retreat experience."
   pathname="/experience"
 >
-  <PageHero
-    eyebrow="The Experience"
-    title="Every hour is intentionally designed."
-    subtitle="From the first breath of morning to the soft close of evening, each moment serves your restoration."
-  />
+  <PageHero eyebrow="The Experience" secondaryHref="#experience" secondaryLabel="Discover More">
+    <h1 class="hero-title">
+      <span class="hero-title-line">Every hour is</span>
+      <span class="hero-title-line">intentionally <em>designed.</em></span>
+    </h1>
+    <p class="hero-sub">From the first breath of morning to the soft close of evening, each moment serves your restoration.</p>
+  </PageHero>
 
-  <section class="section-pad">
-    <div class="max-w">
-      <div class="eyebrow">A Day at Equilibria</div>
-      <h2>The architecture of <em>restoration.</em></h2>
-      <p class="lead">
-        This is not a retreat filled with noise, excess scheduling, or generic programming.
-        It is a precise sequence of spacious, high-touch experiences designed to calm the
-        nervous system and restore clarity.
-      </p>
-      <div class="experience-timeline">
-        <div class="timeline-item">
-          <div class="timeline-time">Morning</div>
-          <h3>Grounding</h3>
-          <ul class="timeline-list">
-            <li>Breathwork and meditation</li>
-            <li>Gentle yoga and herbal ritual</li>
-            <li>Private chef breakfast</li>
-          </ul>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-time">Midday</div>
-          <h3>Expansion</h3>
-          <ul class="timeline-list">
-            <li>Nature immersion</li>
-            <li>Forest walks and reflection</li>
-            <li>Gourmet organic lunch</li>
-          </ul>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-time">Afternoon</div>
-          <h3>Release</h3>
-          <ul class="timeline-list">
-            <li>Massage and thermal recovery</li>
-            <li>Stillness time</li>
-            <li>1:1 clarity support</li>
-          </ul>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-time">Evening</div>
-          <h3>Integration</h3>
-          <ul class="timeline-list">
-            <li>Fine dining</li>
-            <li>Reflection ceremony</li>
-            <li>Deep rest</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+  <Fragment set:html={experienceSection} />
 </BaseLayout>

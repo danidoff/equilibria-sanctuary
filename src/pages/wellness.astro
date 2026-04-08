@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/site/PageHero.astro';
+import wellnessSection from '../content/wellness-section.html?raw';
 ---
 
 <BaseLayout
@@ -8,50 +9,13 @@ import PageHero from '../components/site/PageHero.astro';
   description="Explore the therapeutic pillars, holistic support, and restorative rituals at Equilibria Sanctuary."
   pathname="/wellness"
 >
-  <PageHero
-    eyebrow="Wellness"
-    title="Support that is both gentle and exact."
-    subtitle="Our wellness philosophy combines nervous-system regulation, bodywork, ritual, and spacious reflection."
-  />
+  <PageHero eyebrow="Wellness" secondaryHref="#wellness" secondaryLabel="Discover More">
+    <h1 class="hero-title">
+      <span class="hero-title-line">Not a reset.</span>
+      <span class="hero-title-line">A <em>recalibration.</em></span>
+    </h1>
+    <p class="hero-sub">We work across the full spectrum &mdash; mind, body, and nervous system &mdash; because lasting change lives in all three at once.</p>
+  </PageHero>
 
-  <section class="section-pad" id="wellness">
-    <div class="max-w">
-      <div class="wellness-grid">
-        <div>
-          <div class="eyebrow">The Pillars</div>
-          <h2>Restoration across body, mind, and <em>energy.</em></h2>
-          <div class="wellness-pillars">
-            <div class="pillar">
-              <div class="pillar-num">01</div>
-              <div class="pillar-content">
-                <h4>Nervous System Calm</h4>
-                <p>Breathwork, meditation, silence, and pacing that help the body stop bracing.</p>
-              </div>
-            </div>
-            <div class="pillar">
-              <div class="pillar-num">02</div>
-              <div class="pillar-content">
-                <h4>Therapeutic Care</h4>
-                <p>Massage, thermal recovery, and body-based support tailored to depletion and stress.</p>
-              </div>
-            </div>
-            <div class="pillar">
-              <div class="pillar-num">03</div>
-              <div class="pillar-content">
-                <h4>Inner Clarity</h4>
-                <p>Journaling, reflection, and guided sessions designed to reconnect you with your own signal.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="wellness-image">
-          <img
-            src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1200&q=90"
-            alt="Quiet wellness ritual"
-            loading="lazy"
-          />
-        </div>
-      </div>
-    </div>
-  </section>
+  <Fragment set:html={wellnessSection} />
 </BaseLayout>

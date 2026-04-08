@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/site/PageHero.astro';
+import aboutSection from '../content/about-section.html?raw';
 ---
 
 <BaseLayout
@@ -8,38 +9,13 @@ import PageHero from '../components/site/PageHero.astro';
   description="Learn the story, philosophy, and intention behind Equilibria Sanctuary."
   pathname="/about"
 >
-  <PageHero
-    eyebrow="Our Story"
-    title="Built by people who needed it most."
-    subtitle="Equilibria Sanctuary was born from burnout, recovery, and the conviction that real luxury is being deeply held."
-  />
+  <PageHero eyebrow="About" secondaryHref="#about" secondaryLabel="Discover More">
+    <h1 class="hero-title">
+      <span class="hero-title-line">Built by those who</span>
+      <span class="hero-title-line">needed it <em>most.</em></span>
+    </h1>
+    <p class="hero-sub">Equilibria Sanctuary was not conceived in a boardroom. It was born in the aftermath of burnout, of achieving everything and feeling nothing.</p>
+  </PageHero>
 
-  <section id="about" class="section-pad">
-    <div class="max-w">
-      <div class="about-grid">
-        <div>
-          <div class="eyebrow">Why We Built It</div>
-          <h2>A retreat shaped by <em>lived experience.</em></h2>
-          <div class="divider"></div>
-          <p class="lead">
-            Equilibria Sanctuary was not conceived in a boardroom. It came from the aftermath
-            of overachievement, overstimulation, and depletion.
-          </p>
-          <p class="body-text">
-            We know the exact kind of exhaustion that brings guests here because we have lived
-            it ourselves. Our goal is not spectacle. It is to create privacy, beauty, and care
-            strong enough to help people return to themselves.
-          </p>
-        </div>
-        <div>
-          <img
-            src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1200&q=95"
-            alt="Equilibria Sanctuary landscape"
-            loading="lazy"
-            style="width:100%; aspect-ratio:3/4; object-fit:cover;"
-          />
-        </div>
-      </div>
-    </div>
-  </section>
+  <Fragment set:html={aboutSection} />
 </BaseLayout>

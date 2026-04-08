@@ -37,10 +37,10 @@
   .mobile-menu { position: fixed; inset: 0; z-index: 999; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 28px; padding: 120px 24px 48px; background: rgba(26,26,24,0.96); backdrop-filter: blur(18px); opacity: 0; pointer-events: none; transition: opacity 0.35s ease; }
   .mobile-menu.is-open { opacity: 1; pointer-events: auto; }
   .mobile-menu-label { font-family: var(--font-body); font-size: 0.62rem; letter-spacing: 0.4em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 8px; }
-  .mobile-menu a { font-family: var(--font-display); font-size: clamp(1.6rem, 7vw, 2.4rem); font-weight: 300; color: var(--champagne); text-decoration: none; letter-spacing: 0.08em; text-align: center; }
+  .mobile-menu a { font-family: var(--font-display); font-weight: 300; color: var(--champagne); text-decoration: none; letter-spacing: 0.08em; text-align: center; }
   .mobile-menu .nav-cta { margin-top: 8px; }
 
-  #hero { position: relative; min-height: 100vh; display: flex; align-items: center; overflow: hidden; padding-top: 100px }
+  #hero { position: relative; min-height: 100vh; display: flex; align-items: center; overflow: hidden; padding: 140px 0 100px; }
   .hero-bg { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(15,14,12,0.55) 0%, rgba(15,14,12,0.3) 50%, rgba(15,14,12,0.65) 100%), url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=80') center/cover no-repeat; animation: heroZoom 20s ease-in-out infinite alternate; }
   .hero-overlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(15,14,12,0.72) 0%, rgba(15,14,12,0.46) 45%, rgba(15,14,12,0.22) 100%); z-index: 1; }
   @keyframes heroZoom { from { transform: scale(1); } to { transform: scale(1.04); } }
@@ -104,7 +104,7 @@
   .timeline-item h3 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 300; color: var(--champagne); margin-bottom: 20px; }
   .timeline-list { list-style: none; }
   .timeline-list li { font-family: var(--font-body); font-size: 0.75rem; line-height: 2; letter-spacing: 0.03em; color: rgba(255,255,255,0.5); padding-left: 16px; position: relative; }
-  .timeline-list li::before { content: '—'; position: absolute; left: 0; color: var(--gold); font-size: 0.7rem; }
+  .timeline-list li::before { content: '✦'; position: absolute; left: 0; color: var(--gold); font-size: 0.7rem; }
   .therapies-block { margin-top: 20px; border-top: 1px solid rgba(201,169,110,0.15); padding-top: 16px; }
   .therapies-label { font-family: var(--font-body); font-size: 0.56rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; opacity: 0.7; }
 
@@ -258,6 +258,7 @@
     .footer-top { grid-template-columns: 1fr 1fr; gap: 40px; }
     .accom-features { grid-template-columns: 1fr; }
     .hero-content { padding: 0 32px; max-width: 680px; }
+    body[data-pathname="/"] #hero { min-height: 100svh; }
     .hero-title { font-size: clamp(3rem, 10vw, 5.2rem); }
     .hero-scroll { left: 32px; }
     .accom-grid { grid-template-columns: 1fr; } .accom-main { grid-row: span 1; aspect-ratio: 16/9; }
@@ -284,4 +285,5 @@
     .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
     #pricing { padding: 80px 24px; }
   }
+
 
