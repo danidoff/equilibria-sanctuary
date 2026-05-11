@@ -209,6 +209,47 @@
   .form-submit:hover { background: var(--gold); color: var(--onyx); }
   .form-note { margin-top: 28px; font-family: var(--font-body); font-size: 0.65rem; letter-spacing: 0.1em; color: var(--stone); line-height: 2; }
 
+  /* LEGAL */
+  body[data-pathname="/privacy-policy"] nav,
+  body[data-pathname="/terms"] nav,
+  body[data-pathname="/confidentiality"] nav {
+    background: rgba(250,248,242,0.97);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(201,169,110,0.2);
+    box-shadow: 0 2px 30px rgba(0,0,0,0.06);
+  }
+  body[data-pathname="/privacy-policy"] .nav-logo,
+  body[data-pathname="/terms"] .nav-logo,
+  body[data-pathname="/confidentiality"] .nav-logo {
+    color: var(--onyx);
+  }
+  body[data-pathname="/privacy-policy"] .nav-links a,
+  body[data-pathname="/terms"] .nav-links a,
+  body[data-pathname="/confidentiality"] .nav-links a {
+    color: var(--text-secondary);
+  }
+  body[data-pathname="/privacy-policy"] .nav-hamburger span,
+  body[data-pathname="/terms"] .nav-hamburger span,
+  body[data-pathname="/confidentiality"] .nav-hamburger span {
+    background: var(--onyx);
+  }
+  .legal-document { background: var(--ivory); padding: 140px 40px 100px; }
+  .legal-container { max-width: 780px; margin: 0 auto; }
+  .doc-eyebrow { font-family: var(--font-body); font-size: 0.6rem; letter-spacing: 0.4em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+  .doc-title { font-family: var(--font-display); font-size: clamp(2.4rem, 6vw, 3.4rem); font-weight: 300; line-height: 1.1; color: var(--onyx); margin-bottom: 12px; letter-spacing: 0; }
+  .doc-date { font-family: var(--font-body); font-size: 0.65rem; letter-spacing: 0.1em; color: var(--stone); margin-bottom: 60px; padding-bottom: 40px; border-bottom: 1px solid rgba(201,169,110,0.2); }
+  .legal-document h2 { font-size: 1.45rem; font-weight: 400; color: var(--onyx); margin: 48px 0 16px; letter-spacing: 0; }
+  .legal-document p { font-family: var(--font-body); font-size: 0.82rem; line-height: 2; color: var(--text-secondary); margin-bottom: 16px; letter-spacing: 0.02em; }
+  .legal-document ul { margin: 12px 0 16px; padding-left: 0; list-style: none; }
+  .legal-document li { font-family: var(--font-body); font-size: 0.82rem; line-height: 2; color: var(--text-secondary); padding-left: 20px; position: relative; letter-spacing: 0.02em; }
+  .legal-document li::before { content: '-'; position: absolute; left: 0; color: var(--gold); }
+  .legal-document a { color: var(--gold); text-decoration: none; }
+  .legal-document a:hover { text-decoration: underline; }
+  .legal-document .divider { width: 40px; margin: 48px 0; }
+  .legal-note { font-size: 0.7rem !important; color: var(--stone) !important; font-style: italic; }
+  .highlight-box { background: var(--champagne); border-left: 3px solid var(--gold); padding: 28px 32px; margin: 32px 0; }
+  .highlight-box p { color: var(--onyx); margin: 0; font-size: 0.88rem; font-style: italic; }
+
   /* FOOTER */
   footer { background: var(--onyx); padding: 80px 60px 40px; }
   .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px; margin-bottom: 60px; padding-bottom: 60px; border-bottom: 1px solid rgba(255,255,255,0.06); }
@@ -257,6 +298,7 @@
     .form-grid { grid-template-columns: 1fr; } .form-field.full { grid-column: span 1; }
     .footer-top { grid-template-columns: 1fr 1fr; gap: 40px; }
     .accom-features { grid-template-columns: 1fr; }
+    .legal-document { padding: 128px 32px 88px; }
     .hero-content { padding: 0 32px; max-width: 680px; }
     body[data-pathname="/"] #hero { min-height: 100svh; }
     .hero-title { font-size: clamp(3rem, 10vw, 5.2rem); }
@@ -283,6 +325,9 @@
     .experience-timeline { grid-template-columns: 1fr; }
     .footer-top { grid-template-columns: 1fr; }
     .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+    .footer-legal { flex-wrap: wrap; justify-content: center; row-gap: 12px; }
+    .legal-document { padding: 112px 24px 80px; }
+    .doc-date { margin-bottom: 48px; padding-bottom: 32px; }
     #pricing { padding: 80px 24px; }
   }
 
